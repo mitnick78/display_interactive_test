@@ -127,7 +127,7 @@ npm run test
 ```
 ---
 
-## 💻 Installation locale
+## Installation locale
 
 ```bash
 python3 -m venv .myEnv
