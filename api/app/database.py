@@ -1,7 +1,9 @@
 from sqlalchemy import create_engine
+from dotenv import load_dotenv
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 import os
+load_dotenv()
 
 DATABASE_URL = str(os.getenv("DATABASE_URL"))
 engine = create_engine(DATABASE_URL)
@@ -16,4 +18,4 @@ def get_db():
     try:
         yield db # supendsion for db session, will be closed after request is done
     finally:
-        db.close() # close db session after request is done
+        db.close()

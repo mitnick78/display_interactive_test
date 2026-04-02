@@ -2,9 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routes.health import router as health_router
 from app.routes.customers import router as customers_router
-from app.database import Base, engine
 
-Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
     title="UGO API",

@@ -10,11 +10,6 @@ from app.schemas.order import OrderResponse
 
 router = APIRouter(prefix="/customers", tags=["customers"])
 
-
-# @router.get("", response_model=List[CustomerResponse])
-# def get_customers(db: Session = Depends(get_db)):
-#     return db.query(Customer).order_by(Customer.lastname).all()
-
 @router.get("", response_model=List[CustomerResponse])
 def get_customers(db: Session = Depends(get_db)):
     customers = db.query(Customer).all()
