@@ -95,6 +95,11 @@ Un total des commandes est calculé et affiché sur la page -Orders-*.
 
 ## Installation
 
+### Front
+```bash
+npm install
+```
+
 ### Configuration
 
 Copier le fichier `.env.example` en `.env`, puis renseigner les variables nécessaires.
@@ -138,7 +143,7 @@ npm run test
 ```
 ---
 
-## 💻 Installation locale
+## Installation locale
 
 ```bash
 python3 -m venv .myEnv
