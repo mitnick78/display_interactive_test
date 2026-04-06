@@ -2,7 +2,7 @@ import { describe, it, expect, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import CustomersPage from "./CustomersPage";
-import * as api from "../api/";
+import * as api from "@/api/";
 
 vi.spyOn(api, "fetchCustomers").mockResolvedValue([
   {

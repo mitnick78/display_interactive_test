@@ -1,5 +1,16 @@
 # UGO — Test Full Stack
 
+## Evolutions apportées
+
+- Organisation des dossiers et configuration des imports avec `@/`
+- Création du composant `Label`
+- Amélioration du composant `Button` avec un système de variants
+
+**Pensez à faire un `docker compose down` avant de rebuild**
+
+ - `docker compose down`
+ - `docker compose up --build`
+
 ## Présentation
 
 Application permettant de visualiser une liste de clients ainsi que leurs commandes associées.

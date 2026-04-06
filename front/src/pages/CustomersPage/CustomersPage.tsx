@@ -1,10 +1,11 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import DataTable from '../components/DataTable';
-import type { Column } from '../components/DataTable';
-import { fetchCustomers } from '../api';
-import type { Customer } from '../types';
-import Button from '../components/Button';
+import DataTable from '@/components/DataTable/DataTable';
+import type { Column } from '@/components/DataTable/DataTable';
+import { fetchCustomers } from '@/api';
+import type { Customer } from '@/types';
+import Button from '@/components/Button';
+import { Label } from '@/components/Label';
 
 type CustomerColumn = Column<Customer>;
 
@@ -36,17 +37,7 @@ const CustomersPage: React.FC = () => {
     {
       id: 'title',
       header: 'Civilité',
-      accessor: (c) => (
-        <span
-          className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium ${
-            c.title === 'mme'
-              ? 'bg-pink-100 text-pink-700'
-              : 'bg-blue-100 text-blue-700'
-          }`}
-        >
-          {c.title}
-        </span>
-      ),
+      accessor: (c) => (<Label title={c.title} />),
     },
 
     { id: 'lastname', header: 'Nom', accessor: 'lastname' },
